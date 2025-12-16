@@ -1,0 +1,6 @@
+import 'package:citkabir/app/app.dart';
+import 'package:citkabir/bootstrap.dart';
+
+Future<void> main() async {
+  await bootstrap(() => const App());
+}
