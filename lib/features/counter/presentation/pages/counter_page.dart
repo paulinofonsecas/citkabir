@@ -1,6 +1,8 @@
-import 'package:citkabir/features/counter/presentation/providers/counter_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/legacy.dart';
+
+final counterProvider = StateProvider<int>((ref) => 0);
 
 class CounterPage extends ConsumerWidget {
   const CounterPage({super.key});
@@ -19,12 +21,12 @@ class CounterPage extends ConsumerWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           FloatingActionButton(
-            onPressed: () => ref.read(counterProvider.notifier).increment(),
+            onPressed: () => ref.read(counterProvider.notifier).state++,
             child: const Icon(Icons.add),
           ),
           const SizedBox(height: 8),
           FloatingActionButton(
-            onPressed: () => ref.read(counterProvider.notifier).decrement(),
+            onPressed: () => ref.read(counterProvider.notifier).state--,
             child: const Icon(Icons.remove),
           ),
         ],
