@@ -1,6 +1,6 @@
+import 'package:citkabir/features/counter/presentation/pages/counter_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:citkabir/features/counter/presentation/pages/counter_page.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey =
     GlobalKey<NavigatorState>(debugLabel: 'root');

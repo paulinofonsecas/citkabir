@@ -1,5 +1,4 @@
 import 'package:citkabir/features/counter/presentation/providers/counter_provider.dart';
-import 'package:citkabir/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -8,11 +7,10 @@ class CounterPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final l10n = context.l10n;
     final count = ref.watch(counterProvider);
 
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.counterAppBarTitle)),
+      appBar: AppBar(title: const Text('counterAppBarTitle')),
       body: Center(
         child: Text('$count', style: Theme.of(context).textTheme.displayLarge),
       ),
