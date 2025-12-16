@@ -107,7 +107,7 @@ jobs:
 
       - name: 📤 Upload cobertura para Codecov (opcional)
         if: always()
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           files: coverage/lcov.info
           fail_ci_if_error: false
