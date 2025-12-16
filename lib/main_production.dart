@@ -1,4 +1,4 @@
-import 'package:citkabir/app/app.dart';
+import 'package:citkabir/app.dart';
 import 'package:citkabir/bootstrap.dart';
 
 Future<void> main() async {

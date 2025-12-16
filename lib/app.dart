@@ -1,4 +1,4 @@
-import 'package:citkabir/counter/counter.dart';
+import 'package:citkabir/core/routing/app_router.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
@@ -6,14 +6,14 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: router,
       theme: ThemeData(
         appBarTheme: AppBarTheme(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         ),
         useMaterial3: true,
       ),
-      home: const CounterPage(),
     );
   }
 }
